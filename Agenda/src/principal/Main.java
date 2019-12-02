@@ -26,9 +26,9 @@ public class Main {
 
 
 			try {
-				opcao = Integer.parseInt(JOptionPane.showInputDialog(null, "MENU:\n\n1. Inclusão do contato\n2. Alteração de dados\n3. Exclusão do contato\n4. Consultar por nome\n5. Sair\n\nDigite a opção:"));
+				opcao = Integer.parseInt(JOptionPane.showInputDialog(null, "MENU:\n\n1. Inclusao do contato\n2. Alteracao de dados\n3. Exclusao do contato\n4. Consultar por nome\n5. Sair\n\nDigite a opcao:"));
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(null, "Operação cancelada!\nPrograma encerrado!");
+				JOptionPane.showMessageDialog(null, "Operacao cancelada!\nPrograma encerrado!");
 				break;
 			}			
 			switch (opcao){
@@ -40,11 +40,11 @@ public class Main {
 					numeroTelefone = JOptionPane.showInputDialog(null, "Telefone: ","Cadastro",JOptionPane.INFORMATION_MESSAGE);
 
 					while(agenda.verificarTelefoneExiste(numeroTelefone)) {
-						numeroTelefone = JOptionPane.showInputDialog(null, "Por favor digite outro número!","Cadastro",JOptionPane.INFORMATION_MESSAGE);	 
+						numeroTelefone = JOptionPane.showInputDialog(null, "Por favor digite outro numero!","Cadastro",JOptionPane.INFORMATION_MESSAGE);	 
 					}
 
 					rua = JOptionPane.showInputDialog(null, "Rua: ","Cadastro",JOptionPane.INFORMATION_MESSAGE);
-					numeroCasa = JOptionPane.showInputDialog(null, "Número da casa: ","Cadastro",JOptionPane.INFORMATION_MESSAGE);
+					numeroCasa = JOptionPane.showInputDialog(null, "Numero da casa: ","Cadastro",JOptionPane.INFORMATION_MESSAGE);
 					bairro = JOptionPane.showInputDialog(null, "Bairro: ","Cadastro",JOptionPane.INFORMATION_MESSAGE);
 					cep = JOptionPane.showInputDialog(null, "Cep: ","Cadastro",JOptionPane.INFORMATION_MESSAGE);
 					dataNascimento = JOptionPane.showInputDialog(null, "Data de nascimento?","Cadastro",JOptionPane.INFORMATION_MESSAGE);
@@ -52,7 +52,7 @@ public class Main {
 					contato = new Contato(nome, endereco, dataNascimento, numeroTelefone);
 					agenda.adicionar(contato);
 					JOptionPane.showMessageDialog(null, "Numero cadastrado!");
-					opcao = Integer.parseInt(JOptionPane.showInputDialog(null,"Deseja efetuar outro cadastro?\n\n1. Sim\n2. Não\n\nDigite sua opção:"));
+					opcao = Integer.parseInt(JOptionPane.showInputDialog(null,"Deseja efetuar outro cadastro?\n\n1. Sim\n2. Nao\n\nDigite sua opcao:"));
 				}
 				break;
 
@@ -60,7 +60,7 @@ public class Main {
 				nome = JOptionPane.showInputDialog(null, "Informe o nome do contato que deseja alterar: ","Alterar",JOptionPane.INFORMATION_MESSAGE);
 
 				if(agenda.verificarNomeExiste(nome) == false) {
-					JOptionPane.showMessageDialog(null, "Contato não foi encontrado!", "Aviso", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Contato nao foi encontrado!", "Aviso", JOptionPane.ERROR_MESSAGE);
 					break;
 				}
 
@@ -93,11 +93,11 @@ public class Main {
 				break;
 
 			default:
-				JOptionPane.showMessageDialog(null, "OPÇÃO INVÁLIDA!", "AVISO",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "OPCAO INVALIDA!", "AVISO",JOptionPane.INFORMATION_MESSAGE);
 
 			}
 
-		}//fim do while
+		}
 	}
 
 

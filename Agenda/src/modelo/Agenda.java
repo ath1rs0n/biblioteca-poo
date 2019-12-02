@@ -19,7 +19,7 @@ public class Agenda {
 	public boolean verificarTelefoneExiste(String numeroTelefone) {
 		for(int i=0 ;i < contatos.size(); i++) {
 			if(contatos.get(i).getNumeroTelefone().equals(numeroTelefone)) {
-				JOptionPane.showMessageDialog(null, "Numero de Telefone já existe!","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Numero de Telefone ja existe!","Aviso",JOptionPane.ERROR_MESSAGE);
 				return true;
 			}
 
@@ -52,7 +52,7 @@ public class Agenda {
 
 					acho = 1;
 
-					JOptionPane.showMessageDialog(null, "REGISTRO ENCONTRADO:\n\nNome: " + contatos.get(i).getNome() + "\nTelefone: " + contatos.get(i).getNumeroTelefone() + "\nRua: " + contatos.get(i).getEndereco().getRua() + " \n Número: "  + contatos.get(i).getEndereco().getNumeroCasa() + "\n Bairro: " + contatos.get(i).getEndereco().getBairro() + "\n Cep: " + contatos.get(i).getEndereco().getCep(), "\n Dados do Contato",JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "REGISTRO ENCONTRADO:\n\nNome: " + contatos.get(i).getNome() + "\nTelefone: " + contatos.get(i).getNumeroTelefone() + "\nRua: " + contatos.get(i).getEndereco().getRua() + " \n Numero: "  + contatos.get(i).getEndereco().getNumeroCasa() + "\n Bairro: " + contatos.get(i).getEndereco().getBairro() + "\n Cep: " + contatos.get(i).getEndereco().getCep(), "\n Dados do Contato",JOptionPane.INFORMATION_MESSAGE);
 				}
 			if (acho==0){
 				JOptionPane.showMessageDialog(null, "Nenhum registro foi encontrado!","Aviso",JOptionPane.ERROR_MESSAGE);
@@ -71,7 +71,7 @@ public class Agenda {
 			for(int i=0 ;i < contatos.size(); i++) {
 				if(nome.equalsIgnoreCase(contatos.get(i).getNome())) {
 					acho = 1;
-					posicao = i; //vai pegar o indice da pessoa encontrada
+					posicao = i; 
 				}
 			}
 			if (acho==1){
@@ -80,17 +80,17 @@ public class Agenda {
 				confirmacao = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja excluir?","Excluir", JOptionPane.INFORMATION_MESSAGE);
 
 				if(confirmacao == JOptionPane.CANCEL_OPTION) {
-					JOptionPane.showMessageDialog(null, "Operação cancelada!");
+					JOptionPane.showMessageDialog(null, "Operaï¿½ï¿½o cancelada!");
 
 				}
 
 				if(confirmacao == 0) {
 					contatos.remove(posicao);
-					JOptionPane.showMessageDialog(null, "Contato excluído", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Contato excluido", "Aviso", JOptionPane.INFORMATION_MESSAGE);
 				}
 
 			}else
-				JOptionPane.showMessageDialog(null, "Contato não encontrado!","Aviso",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Contato nao encontrado!","Aviso",JOptionPane.ERROR_MESSAGE);
 		}
 		else{
 			JOptionPane.showMessageDialog(null, "Ainda nenhum cadastro foi realizado!","Aviso",JOptionPane.ERROR_MESSAGE);
