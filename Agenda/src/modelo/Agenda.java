@@ -80,7 +80,7 @@ public class Agenda {
 				confirmacao = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja excluir?","Excluir", JOptionPane.INFORMATION_MESSAGE);
 
 				if(confirmacao == JOptionPane.CANCEL_OPTION) {
-					JOptionPane.showMessageDialog(null, "Opera��o cancelada!");
+					JOptionPane.showMessageDialog(null, "Operacao cancelada!");
 
 				}
 
